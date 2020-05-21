@@ -20,12 +20,13 @@ php artisan vendor:publish --provider=Voh\LaravelFirestore\FirestoreServiceProvi
 ## Usage
 
 
-### Add to Controller
+#### Add to Controller
 ```php
 use Voh\LaravelFirestore\Facades\Firestore;
 ```
 
-### Store Data
+
+#### Store Data
 ```php
 Firestore::collection('users')->document('lovelace')->set([
     'first' => 'Ada',
@@ -35,7 +36,7 @@ Firestore::collection('users')->document('lovelace')->set([
 ```
 
 
-### Retrieve All Documents within a Collection
+#### Retrieve All Documents within a Collection
 ```php
 $firestore = Firestore::collection('users');
 $documents = $firestore->documents()->rows();
